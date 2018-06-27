@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 33102382846467626}
   - component: {fileID: 114352212322688840}
   - component: {fileID: 135599129965520578}
+  - component: {fileID: 114923601604063310}
+  - component: {fileID: 54348515908220250}
   m_Layer: 0
   m_Name: Shot
   m_TagString: Untagged
@@ -49,6 +51,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1672408677465396}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &54348515908220250
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1672408677465396}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &114352212322688840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,6 +146,25 @@ MonoBehaviour:
   m_IsPlaying: 0
   m_BoundFx: {fileID: 102900000, guid: 9eb07103a5c84d1448e61e5c535522f7, type: 3}
   m_FxName: Particles/MagicSpell_Dynamic.pkfx
+--- !u!114 &114923601604063310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1672408677465396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c874d14c75f7d41a0bfaace5f9e5ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 8
+  Duration: 5
+  ExplosionRadius: 3
+  ExplosionForce: 100
+  LayerToProject:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  PrefabExplosion: {fileID: 100000, guid: 46af0d806e91e98449c4fee4eda74e0b, type: 2}
 --- !u!135 &135599129965520578
 SphereCollider:
   m_ObjectHideFlags: 1

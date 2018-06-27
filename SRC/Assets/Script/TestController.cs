@@ -50,7 +50,18 @@ public class TestController : MonoBehaviour {
 
 	private void CastSpell()
 	{
-		//Find way to get correct rotation to throw spell
-		//
+		var mousePos = Input.mousePosition;
+		mousePos.z = 0f;
+		var rayFromCam = _cam.ScreenPointToRay(mousePos);
+		RaycastHit hitInfo;
+		if (!Physics.Raycast(rayFromCam, out hitInfo))
+			return;
+
+		var dirSpell = hitInfo.point - Target.position;
+		dirSpell.y = 0f;
+		dirSpell.Normalize();
+		var rotationSpell = -(Mathf.Atan2(dirSpell.z , dirSpell.x) * Mathf.Rad2Deg - 90f);
+		Debug.LogWarning(rotationSpell + " " + dirSpell.ToString());
+		Object.Instantiate(PrefabSpell, Target.position, Quaternion.Euler(0f, rotationSpell, 0f));
 	}
 }
