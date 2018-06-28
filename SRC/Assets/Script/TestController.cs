@@ -61,7 +61,7 @@ public class TestController : MonoBehaviour {
 		dirSpell.y = 0f;
 		dirSpell.Normalize();
 		var rotationSpell = -(Mathf.Atan2(dirSpell.z , dirSpell.x) * Mathf.Rad2Deg - 90f);
-		Debug.LogWarning(rotationSpell + " " + dirSpell.ToString());
+
 		Object.Instantiate(PrefabSpell, Target.position, Quaternion.Euler(0f, rotationSpell, 0f));
 	}
 }

@@ -4,4 +4,8 @@
 *.sln
 /SRC/Temp/TarGZ
 /SRC/Temp
+/SRC/.vs/
+/SRC/.uEcho/
+
+
 /BUILD
